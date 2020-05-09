@@ -19,7 +19,7 @@ var app = express();
 app.use('/', express.static(__dirname + './public'));
 
 //serve the app here
-app.get('/app', function(req,res){
+app.get('/app', function(req,res) {
 	res.send("This app is undergoing extensive development by Ayush Anand... ");
 });
 
