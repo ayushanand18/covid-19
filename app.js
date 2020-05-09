@@ -16,10 +16,12 @@ var cfenv = require('cfenv');
 var app = express();
 
 // serve the files out of ./public as our main files
-app.get('/', function(req, res){
-	res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
+app.use("/", express.static(__dirname + 'public'));
 
+//serve the app here
+app.get('/app', function(req,res){
+	res.send("This app is undergoing development... ");
+});
 
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
