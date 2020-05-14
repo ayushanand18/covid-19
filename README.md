@@ -1,8 +1,11 @@
-# Node.js Hello World Sample
+# Fighting COVID-19 using blockchain
 
-This application demonstrates a simple, reusable Node.js web application based on the Express framework.
+We are finding ways to fight the novel coronavirus using blockchain. The project is still under developement.
 
-## Run the app locally
+This app uses IBM Bluemix services to run.
+
+
+## Installation and running the app locally
 
 1. [Install Node.js][]
 1. cd into this project's root directory
@@ -11,3 +14,5 @@ This application demonstrates a simple, reusable Node.js web application based o
 1. Access the running app in a browser at <http://localhost:6001>
 
 [Install Node.js]: https://nodejs.org/en/download/
+
+&copy; 2020 Ayush Anand

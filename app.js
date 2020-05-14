@@ -1,27 +1,23 @@
-/*eslint-env node*/
-
-//------------------------------------------------------------------------------
-// node.js starter application for Bluemix
-//------------------------------------------------------------------------------
-
 // This application uses express as its web server
-// for more info, see: http://expressjs.com
 var express = require('express');
 var path = require('path');
-
-// cfenv provides access to your Cloud Foundry environment
-var cfenv = require('cfenv');
-
+var cfenv = require('cfenv'); // cfenv provides access to your Cloud Foundry environment
+var blockjs = require('./blockchain.js')
 // create a new express server
 var app = express();
 
-// serve the files out of ./public as our main files
-app.use('/', express.static(__dirname + './public'));
+// static rendering from the homepage
+app.use('/', express.static(path.join(__dirname,'public')));
 
-//serve the app here
+
+// serve the blockchain app here from /app
 app.get('/app', function(req,res) {
-	res.send("This app is undergoing extensive development by Ayush Anand... ");
+	res.send(blockjs.main());
 });
+
+// #######################################
+// # PLEASE DO NOT CHANGE ANYTHING BELOW #
+// #######################################
 
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();

@@ -1,5 +1,5 @@
 {
-	"name": "Covid19App",
+	"name": "covid19",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
@@ -8,10 +8,11 @@
 	"dependencies": {
 		"express": "4.15.x",
 		"cfenv": "1.0.x",
-		"path":"*"
+		"path": "*",
+        "crypto-js":"*"
 	},
 	"repository": {},
 	"engines": {
 		"node": "10.*"
-	} 
+	}
 }
