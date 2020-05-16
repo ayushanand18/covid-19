@@ -8,8 +8,7 @@
 	"dependencies": {
 		"express": "4.15.x",
 		"cfenv": "1.0.x",
-		"path": "*",
-        "crypto-js":"*"
+		"path": "*"
 	},
 	"repository": {},
 	"engines": {
