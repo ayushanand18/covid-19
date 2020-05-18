@@ -3,12 +3,13 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"start": "node app.js"
+		"start": "node blockchain.js && node app.js"
 	},
 	"dependencies": {
-		"express": "4.15.x",
-		"cfenv": "1.0.x",
-		"path": "*"
+		"cfenv": "^1.2.2",
+		"express": "^4.17.1",
+		"path": "*",
+		"sha256": "*"
 	},
 	"repository": {},
 	"engines": {

@@ -2,7 +2,9 @@
 var express = require('express');
 var path = require('path');
 var cfenv = require('cfenv'); // cfenv provides access to your Cloud Foundry environment
-var blockjs = require('./blockchain.js')
+const blockchain = require('./blockchain.js')
+const bitcoin = new blockchain()
+const sha256=require('sha256');
 // create a new express server
 var app = express();
 
@@ -12,7 +14,19 @@ app.use('/', express.static(path.join(__dirname,'public')));
 
 // serve the blockchain app here from /app
 app.get('/app', function(req,res) {
-	res.send(blockjs.main());
+    bitcoin.createBlock(100, '0', '0');
+    var output = JSON.stringify(bitcoin)+'<br><br>';
+    var hospital = sha256('John Hopkins University')
+    var vacant=200
+    var occupied=100
+    var blockData = bitcoin.createVentilator(hospital,vacant,occupied)
+    output = output+ JSON.stringify(bitcoin)+'<br><br>';
+    var currentHash = bitcoin.hash(bitcoin.getLastBlock().hash,blockData,100)
+    bitcoin.createBlock(102,bitcoin.getLastBlock().hash,currentHash)
+    output = output+ JSON.stringify(bitcoin)+'<br>';
+    output = output+'<br>Validity of the Blockchain....';
+    output = output+'<br>'+bitcoin.chainIsValid(bitcoin.chain);
+    res.send(output);
 });
 
 // #######################################
