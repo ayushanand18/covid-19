@@ -2,9 +2,14 @@
 var express = require('express');
 var path = require('path');
 var cfenv = require('cfenv'); // cfenv provides access to your Cloud Foundry environment
-const blockchain = require('./blockchain.js')
-const bitcoin = new blockchain()
+const blockchain = require('./blockchain.js');
+const bitcoin = new blockchain();
 const sha256=require('sha256');
+const fs = require('fs');
+
+var path = require('path');
+var filePath = path.join(__dirname, 'chainFile.txt');
+
 // create a new express server
 var app = express();
 
@@ -14,19 +19,61 @@ app.use('/', express.static(path.join(__dirname,'public')));
 
 // serve the blockchain app here from /app
 app.get('/app', function(req,res) {
-    bitcoin.createBlock(100, '0', '0');
-    var output = JSON.stringify(bitcoin)+'<br><br>';
-    var hospital = sha256('John Hopkins University')
-    var vacant=200
-    var occupied=100
-    var blockData = bitcoin.createVentilator(hospital,vacant,occupied)
-    output = output+ JSON.stringify(bitcoin)+'<br><br>';
-    var currentHash = bitcoin.hash(bitcoin.getLastBlock().hash,blockData,100)
-    bitcoin.createBlock(102,bitcoin.getLastBlock().hash,currentHash)
-    output = output+ JSON.stringify(bitcoin)+'<br>';
+    fs.readFile(filePath, {encoding: 'utf-8'}, function(err,data){
+        if (!err) {
+            bitcoin.chain = JSON.parse(data);
+            nextSteps();
+        } else {
+            console.log(err);
+        }
+    });
+    const nextSteps = function(){
+    var output = JSON.stringify(bitcoin)+'<br>';
     output = output+'<br>Validity of the Blockchain....';
     output = output+'<br>'+bitcoin.chainIsValid(bitcoin.chain);
     res.send(output);
+    fs.writeFile("chainFile.txt", JSON.stringify(bitcoin.chain), function(err) {
+    if(err) {
+        return console.log(err);
+    }
+    console.log("The file was saved!");
+    }); 
+    };
+});
+
+// serving static files in dashboard
+app.use('/hospital/dashboard', express.static(path.join(__dirname,'public/hosp_dashboard')));
+
+// endpoint for creating ventilators
+app.get('/createVentilator', function(req,res) {
+    fs.readFile(filePath, {encoding: 'utf-8'}, function(err,data){
+        if (!err) {
+            bitcoin.chain = JSON.parse(data);
+            nextSteps();
+            res.send('created ventilator')
+        } else {
+            console.log(err);
+        }
+    });
+    var nextSteps = function(){
+        var hospital = req.param('hospital');
+        var vacant = req.param('vacant');
+        var occupied = req.param('occupied');
+
+        var blockData = bitcoin.createVentilator(hospital,vacant,occupied);
+        var currentHash = bitcoin.hash(bitcoin.getLastBlock().hash,blockData,100);
+        bitcoin.createBlock(102,bitcoin.getLastBlock().hash,currentHash);
+        fs.writeFile("chainFile.txt", JSON.stringify(bitcoin.chain), function(err) {
+        if(err) {
+            return console.log(err);
+        }
+        }); 
+        };
+});
+
+// serving the blockchain
+app.use('/chainFile', function(req,res) {
+    res.sendFile(path.join(__dirname,"chainFile.txt"));
 });
 
 // #######################################

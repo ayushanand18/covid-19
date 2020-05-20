@@ -20,3 +20,18 @@ hr{
     float:left;
     width:40px !important;
 }
+button{
+    padding:15px;
+    padding-left:15px;
+    padding-right:15px;
+    background:white;
+    color:black;
+    border:1px solid white;
+    transition:all 0.3s ease;
+    width:150px;
+}
+button:hover{
+    border:1px solid white;
+    color:white;
+    background: black;
+}
