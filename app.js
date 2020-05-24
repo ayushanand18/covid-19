@@ -16,7 +16,6 @@ var app = express();
 // static rendering from the homepage
 app.use('/', express.static(path.join(__dirname,'public')));
 
-
 // serve the blockchain app here from /app
 app.get('/app', function(req,res) {
     fs.readFile(filePath, {encoding: 'utf-8'}, function(err,data){
@@ -28,17 +27,20 @@ app.get('/app', function(req,res) {
         }
     });
     const nextSteps = function(){
-    var output = JSON.stringify(bitcoin)+'<br>';
+    var output = "<h1>The Blockchain:</h1><br><br>"+ JSON.stringify(bitcoin)+'<br>';
     output = output+'<br>Validity of the Blockchain....';
     output = output+'<br>'+bitcoin.chainIsValid(bitcoin.chain);
-    res.send(output);
-    fs.writeFile("chainFile.txt", JSON.stringify(bitcoin.chain), function(err) {
-    if(err) {
-        return console.log(err);
+    var dic={}
+    for (var i in bitcoin.chain){
+        if (bitcoin.chain[i].ventilators[0]){
+            dic[bitcoin.chain[i].ventilators[0].hospid]=[bitcoin.chain[i].ventilators[0].vacant,bitcoin.chain[i].ventilators[0].occupied,bitcoin.chain[i].ventilators[0].longi,bitcoin.chain[i].ventilators[0].lati]
+        }
+    if (i==bitcoin.chain.length-1){
+        output=output+'<br><br>Table of all hospitals and ventilator status<br>'+JSON.stringify(dic);
     }
-    console.log("The file was saved!");
-    }); 
-    };
+    }
+    res.send(output);
+    }
 });
 
 // serving static files in dashboard
@@ -56,11 +58,14 @@ app.get('/createVentilator', function(req,res) {
         }
     });
     var nextSteps = function(){
+        var userid=req.param('userid')
         var hospital = req.param('hospital');
-        var vacant = req.param('vacant');
-        var occupied = req.param('occupied');
-
-        var blockData = bitcoin.createVentilator(hospital,vacant,occupied);
+        var vacant = parseInt(req.param('vacant'));
+        var occupied = parseInt(req.param('occupied'));
+        var longi = parseInt(req.param('longi'));
+        var lati = parseInt(req.param('lati'));
+        
+        var blockData = bitcoin.createVentilator(hospital,vacant,occupied,longi,lati);
         var currentHash = bitcoin.hash(bitcoin.getLastBlock().hash,blockData,100);
         bitcoin.createBlock(102,bitcoin.getLastBlock().hash,currentHash);
         fs.writeFile("chainFile.txt", JSON.stringify(bitcoin.chain), function(err) {
@@ -72,9 +77,18 @@ app.get('/createVentilator', function(req,res) {
 });
 
 // serving the blockchain
-app.use('/chainFile', function(req,res) {
+app.get('/chainFile', function(req,res) {
     res.sendFile(path.join(__dirname,"chainFile.txt"));
 });
+
+// serving the login page for the hospitals
+app.use('/hospital/login', express.static(path.join(__dirname,'public/hosp_login')));
+
+// returning page after successfull signup
+app.get('/register-success', function(req,res){
+    res.sendFile(path.join(__dirname, 'public/hosp_login/register-success.html'))
+});
+
 
 // #######################################
 // # PLEASE DO NOT CHANGE ANYTHING BELOW #

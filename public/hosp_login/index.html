@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<link href='hosp_login.css' rel='stylesheet'>
+	<title>Hospital Dashboard | COVID-19 App</title>
+</head>
+<body>
+	<div class="wrapper">
+		<span><b>Hospital Dashboard | COVID-19 App</b></span>
+	</div>
+
+    <div id="welcome">
+        <div class="welcome-display">
+            <div>
+                <img alt="App ID Logo" class="logo-icon" src="images/app_id_icon.svg">
+                <p>
+                    Welcome to the<br>
+                    Hospital Dashboard.<br>
+                </p>
+            </div>
+            <button id="login" >Login</button>
+            <div id="error"></div>
+        </div>
+        <div class="hintSection">
+            <div class="flex-bottom"><img alt="hint image" id="hintIcon" src="images/hint_icon.svg"></div>
+        <div class="flex-bottom">
+                Note:Please login to proceed.<br>
+            </div>
+        </div>
+    </div>
+
+	<div id="afterLogin" class="hidden">
+		<div class="welcome-display">
+			<p id="welcomeNameID"></p>
+			<p id="welcomeMessageII"></p>
+		</div>
+
+        <div class="collapsible">
+            <button type="button">
+                <img class="expand" src="./images/20@2x.svg">
+                ID Token
+            </button>
+            <div class="content" id="tokenContent">None</div>
+        </div>
+
+        <div class="collapsible">
+            <button type="button">
+                <img class="expand" src="./images/20@2x.svg">
+                User Information
+            </button>
+            <div class="content" id="userContent">None</div>
+        </div>
+
+        <div class="collapsible">
+            <button type="button">
+                <img class="expand" src = "./images/20@2x.svg">
+                Update Ventilator Status
+            </button>
+            <div class="content" id="updateVentilator">
+                <form name='updateventi' id='updateventi' method='get'>
+                    <input type='hidden' name='userid' id='userIdField'>
+                    <input type='text' name='hospital' id='hospital' disabled>
+                    <input type='number' name='vacant' placeholder='Vacant Ventilators'><br>
+                    <input type='number' name='occupied' placeholder='Occupied Ventilators'><br>
+                    <input type='text' name='longi' placeholder='longitude of hospital'><br>
+                    <input type='text' name='lati' placeholder='latitude of hospital'><br>
+                    <input type='submit' value='Create' class='submit'>
+                </form>
+            </div>
+        </div>
+
+		<div class="hintSection">
+			<div class="flex-bottom"><img alt="hint image" src="images/hint_icon.svg"></div>
+			<div class="flex-bottom">
+				Hint: To update ventilator count<br>
+				expand the 'Update Ventilator Status' section<br>
+				and submit the figures.
+			</div>
+		</div>
+	 </div>
+    <script src="https://cdn.appid.cloud.ibm.com/appid-0.3.0.min.js"></script>
+	<script src="hosp_login.js"></script>
+</body>
+</html>
+
