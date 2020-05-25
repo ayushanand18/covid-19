@@ -45,7 +45,7 @@ app.get('/app', function(req,res) {
 
 // endpoint for creating ventilators
 app.get('/createVentilator', function(req,res) {
-    if (req.headers.referer=='https://6001-d57a59fb-d01a-4dd0-8676-496c969a8b9e.ws-us02.gitpod.io/hospital/login'){
+    if (req.headers.referer=='https://6001-d57a59fb-d01a-4dd0-8676-496c969a8b9e.ws-us02.gitpod.io/hospital/login'|| req.headers.referer=="https://covid-19.eu-gb.cf.appdomain.cloud/hospital/login"){
     fs.readFile(filePath, {encoding: 'utf-8'}, function(err,data){
         if (!err) {
             bitcoin.chain = JSON.parse(data);
