@@ -43,16 +43,14 @@ app.get('/app', function(req,res) {
     }
 });
 
-// serving static files in dashboard
-app.use('/hospital/dashboard', express.static(path.join(__dirname,'public/hosp_dashboard')));
-
 // endpoint for creating ventilators
 app.get('/createVentilator', function(req,res) {
+    if (req.headers.referer=='https://6001-d57a59fb-d01a-4dd0-8676-496c969a8b9e.ws-us02.gitpod.io/hospital/login'){
     fs.readFile(filePath, {encoding: 'utf-8'}, function(err,data){
         if (!err) {
             bitcoin.chain = JSON.parse(data);
             nextSteps();
-            res.send('created ventilator')
+            res.send("Success: Created Ventilator. Redirecting to login page. Please wait... <script type='text/javascript'>setTimeout(() => {  window.location.href='/hospital/login'; }, 3000);</script>");
         } else {
             console.log(err);
         }
@@ -73,7 +71,10 @@ app.get('/createVentilator', function(req,res) {
             return console.log(err);
         }
         }); 
-        };
+        }
+    }else {
+        res.send("Invalid request. Only authorised users from hospitals are allowed to use their service.<script type='text/javascript'>setTimeout(() => {  window.location.href='/'; }, 3000);</script>")
+    }
 });
 
 // serving the blockchain
@@ -81,6 +82,9 @@ app.get('/chainFile', function(req,res) {
     res.sendFile(path.join(__dirname,"chainFile.txt"));
 });
 
+app.get('/test', function(req,res){
+    res.sendFile(path.join(__dirname,'test.html'));
+})
 // serving the login page for the hospitals
 app.use('/hospital/login', express.static(path.join(__dirname,'public/hosp_login')));
 

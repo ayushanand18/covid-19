@@ -44,7 +44,7 @@ async function onLoginButtonClick() {
             clientId: "cfd0de00-b47a-47c0-9fa4-c5638875926e",
             discoveryEndpoint: "https://eu-gb.appid.cloud.ibm.com/oauth/v4/649e78bc-aeb9-49c8-a799-6e9a73109041/.well-known/openid-configuration"
         });
-		showElement($loginButton);
+        showElement($loginButton);
 		$loginButton.addEventListener('click', onLoginButtonClick);
 	} catch (e) {
 		$error.textContent = e;

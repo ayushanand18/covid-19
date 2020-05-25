@@ -25,7 +25,7 @@
         <div class="hintSection">
             <div class="flex-bottom"><img alt="hint image" id="hintIcon" src="images/hint_icon.svg"></div>
         <div class="flex-bottom">
-                Note:Please login to proceed.<br>
+                Note: Please login to proceed. You need <br>to login everytime you update<br> the status for added security.<br>
             </div>
         </div>
     </div>
@@ -68,6 +68,25 @@
                     <input type='submit' value='Create' class='submit'>
                 </form>
             </div>
+            <div class="content">
+                <script>
+                var lat, lng;
+                map.addEventListener('mousemove', function(ev) {
+                lat = ev.latlng.lat;
+                lng = ev.latlng.lng;
+                });
+
+                document.getElementById("transitmap").addEventListener("contextmenu", function (event) {
+                // Prevent the browser's context menu from appearing
+                event.preventDefault();
+
+                // Add marker
+                // L.marker([lat, lng], ....).addTo(map);
+                alert(lat + ' - ' + lng);
+
+                return false; // To disable default popup.
+                });
+                </script>
         </div>
 
 		<div class="hintSection">
