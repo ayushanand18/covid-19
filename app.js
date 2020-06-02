@@ -6,13 +6,14 @@ const blockchain = require('./blockchain.js');
 const bitcoin = new blockchain();
 const sha256=require('sha256');
 const fs = require('fs');
+var cookieParser = require('cookie-parser');
 
 var path = require('path');
 var filePath = path.join(__dirname, 'chainFile.txt');
 
 // create a new express server
 var app = express();
-
+app.use(cookieParser())
 // static rendering from the homepage
 app.use('/', express.static(path.join(__dirname,'public')));
 
@@ -45,7 +46,10 @@ app.get('/app', function(req,res) {
 
 // endpoint for creating ventilators
 app.get('/createVentilator', function(req,res) {
-    if (req.headers.referer=='https://6001-d57a59fb-d01a-4dd0-8676-496c969a8b9e.ws-us02.gitpod.io/hospital/login'|| req.headers.referer=="https://covid-19.eu-gb.cf.appdomain.cloud/hospital/login"){
+    var userid=req.param('userid');
+    if (req.cookies.sub==userid && req.cookies.sub!=undefined){
+        console.log(userid)
+        console.log(req.cookies.sub)
     fs.readFile(filePath, {encoding: 'utf-8'}, function(err,data){
         if (!err) {
             bitcoin.chain = JSON.parse(data);
@@ -56,14 +60,15 @@ app.get('/createVentilator', function(req,res) {
         }
     });
     var nextSteps = function(){
-        var userid=req.param('userid')
+        
         var hospital = req.param('hospital');
+        var hospitalname = req.param('hospitalname');
         var vacant = parseInt(req.param('vacant'));
         var occupied = parseInt(req.param('occupied'));
-        var longi = parseInt(req.param('longi'));
-        var lati = parseInt(req.param('lati'));
+        var longi = parseFloat(req.param('longi'));
+        var lati = parseFloat(req.param('lati'));
         
-        var blockData = bitcoin.createVentilator(hospital,vacant,occupied,longi,lati);
+        var blockData = bitcoin.createVentilator(hospital,hospitalname,vacant,occupied,longi,lati);
         var currentHash = bitcoin.hash(bitcoin.getLastBlock().hash,blockData,100);
         bitcoin.createBlock(102,bitcoin.getLastBlock().hash,currentHash);
         fs.writeFile("chainFile.txt", JSON.stringify(bitcoin.chain), function(err) {
@@ -82,9 +87,6 @@ app.get('/chainFile', function(req,res) {
     res.sendFile(path.join(__dirname,"chainFile.txt"));
 });
 
-app.get('/test', function(req,res){
-    res.sendFile(path.join(__dirname,'test.html'));
-})
 // serving the login page for the hospitals
 app.use('/hospital/login', express.static(path.join(__dirname,'public/hosp_login')));
 
