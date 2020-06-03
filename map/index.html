@@ -1,0 +1,39 @@
+<!doctype HTML>
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700" rel="stylesheet">
+    <script src="script.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+</head>
+<body>
+    <header>
+        <h1>COVID-19 Ventilators Interactive Dashboard</h1>
+        <hr><br>
+    </header>
+    <section>
+        <div class="content">
+            <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&branch=experimental&key=Av4EXrI3jTDkujMDtUrjtMrGUwuCSE52KLBcxvxbI78c3hA32ayoocYbl8MwQ5zv' async defer></script>
+            <div class="myMap" id="myMap">
+            </div>
+        </div>
+    </section>
+    <aside>
+            <input onclick="validtest()" type="button" class="btn-validity" id="btn-validity" value='Check Validity'>
+            <script>
+                const validtest = function(){
+                    var validity;
+                    var xhttps = new XMLHttpRequest();
+                    xhttps.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                    validity = this.responseText;
+                    document.getElementById('btn-validity').setAttribute('value',validity);
+                    }   
+                    };
+                    xhttps.open("GET", "/validity", true);
+                    xhttps.send();   
+                };
+            </script>
+    </aside>
+</body>
+</html>

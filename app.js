@@ -18,7 +18,7 @@ app.use(cookieParser())
 app.use('/', express.static(path.join(__dirname,'public')));
 
 // serve the blockchain app here from /app
-app.get('/app', function(req,res) {
+app.get('/blocks', function(req,res) {
     fs.readFile(filePath, {encoding: 'utf-8'}, function(err,data){
         if (!err) {
             bitcoin.chain = JSON.parse(data);
@@ -28,19 +28,22 @@ app.get('/app', function(req,res) {
         }
     });
     const nextSteps = function(){
-    var output = "<h1>The Blockchain:</h1><br><br>"+ JSON.stringify(bitcoin)+'<br>';
-    output = output+'<br>Validity of the Blockchain....';
-    output = output+'<br>'+bitcoin.chainIsValid(bitcoin.chain);
-    var dic={}
-    for (var i in bitcoin.chain){
-        if (bitcoin.chain[i].ventilators[0]){
-            dic[bitcoin.chain[i].ventilators[0].hospid]=[bitcoin.chain[i].ventilators[0].vacant,bitcoin.chain[i].ventilators[0].occupied,bitcoin.chain[i].ventilators[0].longi,bitcoin.chain[i].ventilators[0].lati]
+        res.send(JSON.stringify(bitcoin));
+    }
+});
+
+// return the validity of the blockchain
+app.get('/validity', function(req, res){
+    fs.readFile(filePath, {encoding: 'utf-8'}, function(err,data){
+        if (!err) {
+            bitcoin.chain = JSON.parse(data);
+            nextSteps();
+        } else {
+            console.log(err);
         }
-    if (i==bitcoin.chain.length-1){
-        output=output+'<br><br>Table of all hospitals and ventilator status<br>'+JSON.stringify(dic);
-    }
-    }
-    res.send(output);
+    });
+    const nextSteps = function(){
+        res.send(bitcoin.chainIsValid(bitcoin.chain));
     }
 });
 
@@ -89,6 +92,8 @@ app.get('/chainFile', function(req,res) {
 
 // serving the login page for the hospitals
 app.use('/hospital/login', express.static(path.join(__dirname,'public/hosp_login')));
+
+app.use('/app', express.static(path.join(__dirname,'map')));
 
 // returning page after successfull signup
 app.get('/register-success', function(req,res){

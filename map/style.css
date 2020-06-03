@@ -1,0 +1,39 @@
+body, html{
+    background-color:black;
+    color:white;
+    padding:10px;
+    font-family:Poppins;
+}
+hr{
+    width:20px;
+    color:white;
+    float:left;
+    overflow:hidden;
+}
+.btn-validity{
+    background:green;
+    color:white;
+    font-family:"Poppins";
+    padding:15px;
+    padding-left:20px;
+    border:0px;
+    padding-right:20px;
+    width:200px;
+    font-weight:400;
+    letter-spacing: 0.5px;
+    transition:all 0.3s ease;
+    cursor:pointer;
+}
+.btn-validity:hover{
+    background: darkgreen;
+}
+section{
+    overflow:hidden;
+    float:left;
+    margin-right:10px;
+}
+#myMap {
+    position: relative;
+    width: 60em;
+    height: 500px;
+}
