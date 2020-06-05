@@ -3,7 +3,6 @@ body,html {
 	margin: 0 auto;
 	font-family: "Poppins";
 	color: #ffffff;
-    padding:10px;
 }
 a {
 	text-decoration: none;
@@ -16,7 +15,7 @@ a:hover {
 h1 {
 	font-size: 2em;
 }
-hr{
+section hr{
     float:left;
     width:40px !important;
 }
@@ -24,14 +23,34 @@ button{
     padding:15px;
     padding-left:15px;
     padding-right:15px;
-    background:white;
-    color:black;
+    background:transparent;
+    color:white;
     border:1px solid white;
     transition:all 0.3s ease;
-    width:150px;
+    width:200px;
+    cursor:pointer;
+    font-size:15px;
 }
 button:hover{
     border:1px solid white;
-    color:white;
-    background: black;
+    color:black;
+    background: white;
+}
+.header{
+    background-image: url('https://image.shutterstock.com/image-vector/world-map-love-planet-hearts-260nw-1716101383.jpg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-color: rgb(20,20,40);
+    background-blend-mode: luminosity;
+}
+section{
+    padding:10px;
+}
+.header p, .header h5{
+    max-width:600px !important;
+    margin-left:10% !important;
+    font-weight:400 !important;
+    font-size:1.1em;
+    color: white;
 }

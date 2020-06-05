@@ -17,6 +17,7 @@ const appID = new AppID();
 
 async function onLoginButtonClick() {
 	try {
+        alert("If you are trying to register/signup, then please enter the hospital name in the 'First Name' and the branch name as 'Last Name'.\n For eg.\nFirst Name: Meenakshi Hospital\nLast Name: Chennai.");
 		hideElement($loginButton);
 
 		const tokens = await appID.signin();

@@ -39,7 +39,7 @@ const addPins = function(map,hospid,hospname,vacant,occupied,longi,lati,k){
     Microsoft.Maps.Events.addHandler(pin, 'click', pushpinClicked);
     map.entities.push(pin);
 }
-
+var vacants= occupieds = 0;
 const renderBlocks=function(map){
      bs = JSON.parse(block);
      for (var i in bs.chain){
@@ -54,9 +54,13 @@ const renderBlocks=function(map){
 const pushAllPins = function(map){
     var k = 1
     for (var j in d){
+        vacants=vacants+d[j][1];
+        occupieds=occupieds+d[j][2];
         addPins(map,j,d[j][0],d[j][1],d[j][2],d[j][3],d[j][4],k)
         k=k+1
      }
+     document.querySelector(".vacant").innerHTML=vacants;
+     document.querySelector(".occupied").innerHTML=occupieds;
  };
  function pushpinClicked(e) {
         //Make sure the infobox has metadata to display.

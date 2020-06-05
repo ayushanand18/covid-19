@@ -64,29 +64,32 @@
                 Update Ventilator Status
             </button>
             <div class="content" id="updateVentilator">
+<!-- Area to select map-->
+<div>
+     <form name="form" id="form">
+     <input type="text" id="address" name="address" placeholder="Enter Address of Hospital">
+     <input type="submit" class="go" value="Go">
+</form>
+<div id ="demo">
+Enter address in the field above, then click go to see it on map. Then click to 'Select This Address" to finalize your choice.</div>
+<input type='button' onclick="selectThisArea()" class="selectArea" value="Select This Address">
+<br><br>
+<script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&branch=experimental&key=Av4EXrI3jTDkujMDtUrjtMrGUwuCSE52KLBcxvxbI78c3hA32ayoocYbl8MwQ5zv' async defer></script>
+<div id="myMap"></div>
+<br><br>
+</div>
                 <form name='updateventi' id='updateventi' method='get'>
                     <input type='hidden' name='userid' id='userIdField' required>
                     <input type='hidden' name='hospital' id='hospital' required>
                     <input type='hidden' name='hospitalname' id='hospitalname' required><br>
-                    <input type='number' name='vacant' placeholder='Vacant Ventilators' required><br>
-                    <input type='number' name='occupied' placeholder='Occupied Ventilators' required><br>
+                    <input type='number' name='vacant' class="txtfld" min="0" max="999" placeholder='Vacant Ventilators' required><br>
+                    <input type='number' name='occupied' class="txtfld" min="0" max="999" placeholder='Occupied Ventilators' required><br>
                     <input type='hidden' name='longi' id='longi' placeholder='longitude of hospital' required >   &nbsp;&nbsp;&nbsp;&nbsp;
                     <input type='hidden' name='lati' id='lati' placeholder='latitude of hospital' required ><br>
                     <input type='submit' value='Create' class='submit'>
                 </form>
-<!-- Area to select map-->
-<div>
-     <form name="form" id="form">
-     <input type="text" id="address" name="address" value="Sector 6 Vaishali">
-     <input type="submit"  value="Search Address">
-     </form>
-     <div id ="demo"></div>
-     <br><br>
-<script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&branch=experimental&key=Av4EXrI3jTDkujMDtUrjtMrGUwuCSE52KLBcxvxbI78c3hA32ayoocYbl8MwQ5zv' async defer></script>
-<div id="myMap"></div>
-<br><br>
-<input type='button' onclick="selectThisArea()" value="Select This Area">
-</div>
+
+
             </div>
         </div>
 

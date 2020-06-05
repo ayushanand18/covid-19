@@ -37,3 +37,22 @@ section{
     width: 60em;
     height: 500px;
 }
+.table{
+    border:0px;
+    margin:0px;
+    padding-top:0px;
+    line-height:0px;
+}
+.vacant{
+    color:green;
+    width:100px;
+}
+.occupied{
+    color:red;
+}
+a{
+    text-decoration: none;
+    background: white;
+    color:black;
+    
+}

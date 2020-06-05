@@ -2,7 +2,7 @@
 <head>
     <link rel="stylesheet" href="style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700" rel="stylesheet">
-    <script src="script.js"></script>
+    
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
 </head>
@@ -13,7 +13,7 @@
     </header>
     <section>
         <div class="content">
-            <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&branch=experimental&key=Av4EXrI3jTDkujMDtUrjtMrGUwuCSE52KLBcxvxbI78c3hA32ayoocYbl8MwQ5zv' async defer></script>
+            <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&branch=experimental&key=Av4EXrI3jTDkujMDtUrjtMrGUwuCSE52KLBcxvxbI78c3hA32ayoocYbl8MwQ5zv' async></script>
             <div class="myMap" id="myMap">
             </div>
         </div>
@@ -34,6 +34,28 @@
                     xhttps.send();   
                 };
             </script>
+            <div>
+                <h3>Total Numbers</h3>
+                <hr width="20px"><br>
+                <table class="table" border="0px">
+                    <tr class="hdng">
+                        <td><h4> Vacant</h4></td>
+                        <td><h4> Occupied </h4></td>
+                    </tr>
+                    <tr class="data">
+                        <td class='vacant'></td>
+                        <td class="occupied"></td>
+                    </tr>
+                </table>
+            </div>
     </aside>
+    <br><br>
+    <footer>
+    <div>
+        &copy; 2020 Ayush Anand <br>
+        <a href="/#contact"> &nbsp;Contact Us&nbsp; </a>
+    </div>
+    </footer>
+    <script src="script.js" async></script>
 </body>
 </html>

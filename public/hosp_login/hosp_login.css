@@ -150,3 +150,62 @@ body {
 	margin-top: 20px;
 	box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.15);
 }
+.go{
+    background: dodgerblue;
+    border: 0px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    margin-left: 0px;
+}
+.go:hover{
+    background-color:#4178BE;
+}
+#address{
+    height: 23px;
+    margin-right: 0px;
+    padding: 5px;
+    border-radius: 0px;
+    border: 1px solid black;
+    border-right: 1px solid white;
+    overflow: hidden;
+    float: left;
+}
+.submit{
+    background: forestgreen;
+    border: 0px;
+    padding: 10px;
+    padding-left: 29px;
+    padding-right: 29px;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    margin-left: 0px;
+    width: 180px;
+    cursor:pointer;
+}
+.selectArea{
+    background: black;
+    border: 0px;
+    padding: 12px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: white;
+    position: relative;
+    left: 5px;
+    bottom: -60px;
+    z-index: 5;
+    cursor:pointer;
+}
+.txtfld{
+    width: 170px;
+    border-radius: 0px;
+    border: 0px;
+    border-bottom: 1px solid black;
+    height: 30px;
+    padding-left: 8px;
+    background: white;
+}
