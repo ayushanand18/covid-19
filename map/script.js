@@ -9,6 +9,7 @@ var map = new Microsoft.Maps.Map('#myMap', {
 var xhttp = new XMLHttpRequest();
 var block,bs;
 var d={}
+var co = 0;
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       block = this.responseText;
@@ -16,7 +17,7 @@ xhttp.onreadystatechange = function() {
             credentials: 'AlqUbMVkRpMkWMcFs_18FoZGeNcg8RLToYX5OeOCHnexAuUZxqtesONoCbT1sTAd',
             center: new Microsoft.Maps.Location(25,78),
             mapTypeId: Microsoft.Maps.MapTypeId.aerial,
-            zoom: 2
+            zoom: 5
         });
         infobox = new Microsoft.Maps.Infobox(map.getCenter(), {
             visible: false
@@ -30,14 +31,17 @@ xhttp.send();
 
 const addPins = function(map,hospid,hospname,vacant,occupied,longi,lati,k){
     console.log(lati,longi)
-    var locs = new Microsoft.Maps.Location(longi,lati);
-    var pin = new Microsoft.Maps.Pushpin(locs);
-    pin.metadata ={
-        title: hospname,
-        description: 'Vacant: ' +vacant.toString()+'  Occupied: '+occupied.toString()
-    };
-    Microsoft.Maps.Events.addHandler(pin, 'click', pushpinClicked);
-    map.entities.push(pin);
+    if (longi!=null || lati!=null){
+        co=co+1;
+        var locs = new Microsoft.Maps.Location(longi,lati);
+        var pin = new Microsoft.Maps.Pushpin(locs);
+        pin.metadata ={
+            title: hospname,
+            description: 'Vacant: ' +vacant.toString()+'  Occupied: '+occupied.toString()
+        };
+        Microsoft.Maps.Events.addHandler(pin, 'click', pushpinClicked);
+        map.entities.push(pin);
+    }
 }
 var vacants= occupieds = 0;
 const renderBlocks=function(map){
@@ -61,6 +65,7 @@ const pushAllPins = function(map){
      }
      document.querySelector(".vacant").innerHTML=vacants;
      document.querySelector(".occupied").innerHTML=occupieds;
+     document.querySelector(".counts").innerHTML='<br><br>'+co.toString();
  };
  function pushpinClicked(e) {
         //Make sure the infobox has metadata to display.
