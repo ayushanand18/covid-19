@@ -30,7 +30,6 @@ xhttp.open("GET", "/blocks", true);
 xhttp.send();
 
 const addPins = function(map,hospid,hospname,vacant,occupied,longi,lati,k){
-    console.log(lati,longi)
     if (longi!=null || lati!=null){
         co=co+1;
         var locs = new Microsoft.Maps.Location(longi,lati);
