@@ -82,8 +82,20 @@ Enter address in the field above, then click go to see it on map. Then click to 
                     <input type='hidden' name='userid' id='userIdField' required>
                     <input type='hidden' name='hospital' id='hospital' required>
                     <input type='hidden' name='hospitalname' id='hospitalname' required><br>
-                    <input type='number' name='vacant' class="txtfld" min="0" max="999" placeholder='Vacant Ventilators' required><br>
-                    <input type='number' name='occupied' class="txtfld" min="0" max="999" placeholder='Occupied Ventilators' required><br>
+                    <table border='None'>
+                        <tr>
+                        <th>Ventilator Counts</th>
+                        <th>Hospital Counts</th>
+                        </tr>
+                        <tr>
+                            <td><input type='number' name='vacant' class="txtfld" min="0" max="999" placeholder='Vacant Ventilators' required></td>
+                            <td><input type='number' name='vbed' class="txtfld" min="0" max="999" placeholder='Vacant Beds' required></td>
+                        </tr>
+                        <tr>
+                            <td><input type='number' name='occupied' class="txtfld" min="0" max="999" placeholder='Occupied Ventilators' required></td>
+                            <td><input type='number' name='obed' class="txtfld" min="0" max="999" placeholder='Occupied Beds' required></td>
+                        </tr>
+                    </table>
                     <input type='hidden' name='longi' id='longi' placeholder='longitude of hospital' required >   &nbsp;&nbsp;&nbsp;&nbsp;
                     <input type='hidden' name='lati' id='lati' placeholder='latitude of hospital' required ><br>
                     <input type='submit' value='Create' class='submit'>

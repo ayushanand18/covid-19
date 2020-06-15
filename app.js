@@ -70,8 +70,10 @@ app.get('/createVentilator', function(req,res) {
         var occupied = parseInt(req.param('occupied'));
         var longi = parseFloat(req.param('longi'));
         var lati = parseFloat(req.param('lati'));
+        var vbed = parseInt(req.param('vbed'));
+        var obed = parseInt(req.param('obed'));
         
-        var blockData = bitcoin.createVentilator(hospital,hospitalname,vacant,occupied,longi,lati);
+        var blockData = bitcoin.createVentilator(hospital,hospitalname,vacant,occupied,longi,lati,vbed,obed);
         var currentHash = bitcoin.hash(bitcoin.getLastBlock().hash,blockData,100);
         bitcoin.createBlock(102,bitcoin.getLastBlock().hash,currentHash);
         fs.writeFile("chainFile.txt", JSON.stringify(bitcoin.chain), function(err) {

@@ -25,14 +25,16 @@ blockchain.prototype.hash = function(prevHash, blockData, nonce){
     hash = sha256(hash)
     return hash;
 };
-blockchain.prototype.createVentilator = function(hospid, hospitalname,vacant, occupied, longi,lati) {
+blockchain.prototype.createVentilator = function(hospid, hospitalname,vacant, occupied, longi,lati,vbed,obed) {
 	const newVentilator = {
         hospid: hospid,
         hospitalname:hospitalname,
 		vacant: vacant,
         occupied: occupied,
         longi:longi,
-        lati:lati
+        lati:lati,
+        vbed:vbed,
+        obed:obed
     };
     this.pending.push(newVentilator)
 	return newVentilator;
