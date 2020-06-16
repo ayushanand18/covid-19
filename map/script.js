@@ -36,7 +36,13 @@ const addPins = function(map,hospid,hospname,vacant,occupied,longi,lati,vbed,obe
         var pin = new Microsoft.Maps.Pushpin(locs);
         pin.metadata ={
             title: hospname,
-            description: 'Ventilators\n Vacant: ' +vacant.toString()+'  Occupied: '+occupied.toString()+'\nHospital Beds\n Vacant: ' +vbed.toString()+'  Occupied: '+obed.toString()
+            description: '<table border="0px">\
+            <tr> <th>Vacant</th> <th> Occupied</th></tr>\
+            <tr><td>Ventilators</td></tr>\
+            <tr><td>' +vacant.toString()+'</td><td>'+occupied.toString()+'</td>\
+            <tr><td>Hospital Beds</td>\
+            <tr><td>' +vbed.toString()+'</td><td>'+obed.toString() +'</td></tr>\
+            </table><a href="https://www.google.co.in/maps/place/'+hospname+'/@28.4799418,77.2824343,12.63z/data=!4m8!1m2!2m1!1s'+hospname+'">Get directions.'
         };
         Microsoft.Maps.Events.addHandler(pin, 'mouseover', pushpinClicked);
         map.entities.push(pin);
