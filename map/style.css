@@ -35,7 +35,8 @@ section{
 }
 #myMap {
     position: relative;
-    width: 60em;
+    width:300px;
+    padding:-5px;
     height: 500px;
 }
 .table{
@@ -56,4 +57,12 @@ a{
     background: white;
     color:black;
     
+}
+#mymap{
+    width
+}
+@media screen and (min-width :800px){
+    #myMap{
+        width: 60em !important;
+    }
 }
