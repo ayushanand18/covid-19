@@ -1,110 +1,110 @@
 hospname,occupied,vacant,longi,lati,obed,vbed
-GovtGuru Teg Bahadur Hospital,42,11,28.684005,77.309414,256,1244
+Govt Guru Teg Bahadur Hospital,42,11,28.684005,77.309414,256,1244
 Govt Lok Nayak (LNJP),10,54,28.638257,77.238583,763,1237
 Govt AIIMS (Jhajjar),4,35,28.498766,76.872078,492,233
-GovtRajiv Gandhi Super Speciality (RGSS),1,33,28.689224,77.31649,199,301
-GovtSafdarjung (SJH),54,0,28.568031,77.205826,277,6
-GovtAIIMS (Delhi),47,3,28.567094,77.210639,218,47
-GovtSatyawadi Raja Harish Chandra,0,0,28.841098,77.102693,27,157
-GovtDeep Chand Bandhu Hospital,4,3,28.681946,77.178183,116,24
-GovtRam Manohar Lohia (RML),4,10,28.625723,77.202721,132,5
-GovtLady Hardinge Medical College (LHMC),3,10,28.635493,77.214175,60,0
-PvtMaharaja Agrasen Punjabi Bagh,13,0,28.673941,77.134,151,49
-PvtMax Saket,32,0,28.527061,77.210624,200,0
-PvtSaroj Super Speciality Hospital,0,10,28.70613,77.129093,58,117
-PvtHoly Family Hospital,11,4,28.561807,77.275111,110,65
-PvtIndraprastha Apollo,6,2,28.542578,77.283966,142,28
-PvtHakeem Abdul Hameed Centenary Hospital (HAHC),0,2,28.514851,77.252114,23,127
-PvtBL Kapoor,7,0,28.643294,77.179716,126,24
-PvtSir Gangaram Hospital,35,6,28.638515,77.189754,130,12
-PvtMax Patparganj,10,0,28.632918,77.309007,105,28
-PvtSir Ganga Ram City (SGR City),16,0,28.638534,77.189743,117,8
-PvtSt Stephen's,4,0,28.66682,77.214614,67,53
-PvtBatra,2,3,28.513003,77.24579,110,0
-PvtMaha Durga Charitable Trust (MDCT),4,4,28.714231,77.186591,85,15
-PvtVenkateshwar,2,2,28.588882,77.037531,83,17
-PvtPark Hospital,1,1,28.651637,77.093169,31,69
-PvtFortis Escorts Heart Institute,4,0,28.560649,77.273914,86,14
-PvtAakash Healthcare,2,0,28.605257,77.053385,100,0
-PvtMax Shalimar Bagh,10,0,28.727685,77.152588,90,0
-PvtRajiv Gandhi Cancer Institute and Research Centre (RGCIRC),1,0,28.716672,77.111396,39,33
-PvtHuman Care Medical Charitable Trust (HCMCT) Hospital,6,0,28.594527,77.070425,41,23
-PvtSri Balaji Action,3,0,28.673784,77.110267,59,5
-PvtMool Chand Khairati Ram Hospital,2,0,28.566415,77.235143,42,18
-PvtFortis Shalimar Bagh,3,0,28.709538,77.169913,60,0
-PvtMata Chanan Devi Hospital,5,2,28.618731,77.078303,44,12
-"PvtBansal Global Hospital, Jahangirpuri",0,2,28.727303,77.162415,20,30
-PvtJaipur Golden,6,0,28.697633,77.109563,48,0
-PvtCygnus Orthocare,0,2,28.546175,77.19723,9,31
-PvtSantom,4,0,28.713978,77.138414,27,13
-PvtPSRI,8,0,28.533124,77.225489,40,0
-PvtDharamshila Narayana Hospital,3,0,28.602503,77.314139,32,8
-PvtAyushman Hospital,0,2,28.588159,77.05953,22,16
-PvtIndian Spinal Injuries Centre,4,0,28.533093,77.142206,19,18
-PvtCygnus MLS,4,0,28.726634,77.051652,27,8
-PvtSir Ganga Ram Kolmet (SGR Kolmet),5,1,28.643487,77.187293,32,2
-PvtShree Aggarasain International Hospital,4,0,28.71851,77.064982,34,0
-PvtVIMHANS,1,8,28.569255,77.251076,6,26
-PvtFortis Vasant Kunj,2,0,28.519201,77.160268,24,8
-PvtMadhukar Rainbow Children Hospital,0,2,28.529279,77.20464,1,25
-"PvtIBS Hospital, Lajpat Nagar",1,5,28.565215,77.244123,18,7
-"PvtChayan Hospital, Najafgarh",0,1,28.594709,76.99146,1,24
-PvtPrimus Super Specialty Hospital,2,0,28.592883,77.181263,24,0
-"PvtKalra Hospital, Kirti Nagar",1,0,28.655192,77.138572,23,0
-PvtGoyal Hospital and Urology Centre,2,0,28.661162,77.282445,21,0
-PvtAction Cancer,1,1,28.673131,77.11319,3,17
-"PvtB.M. Gupta Hospital, Uttam Nagar",0,1,28.619539,77.061369,9,11
-"PvtJeevan Anmol Hospital, Mayur Vihar Phase-I",0,1,28.60608,77.295449,11,9
-PvtRLKC Metro,0,1,28.651165,77.154765,20,0
-PvtRathi Hospital Nangloi,1,0,28.686582,77.070524,4,16
-PvtBhagwati Hospital,0,2,28.719112,77.129593,20,0
-PvtBrahm Shakti Hospital,0,1,28.712276,77.08129,5,15
-PvtDelhi Heart and Lung Institute,1,1,28.64162,77.205232,20,0
-PvtNavjeevan Hospital,1,0,28.694848,77.108802,13,7
-"PvtMata Roop Rani Maggo Hospital, Uttam Nagar",1,0,28.621075,77.050272,18,0
-"PvtGandhi Nursing Home, Uttam Nagar",1,0,28.619938,77.053587,16,0
-"PvtBensups Hospital, Dwarka",0,1,28.592878,77.04444,5,5
-"PvtLalita Hospital, Begumpur",0,1,28.730656,77.06351,0,10
-"PvtSMS Hospital, Gagan Vihar",0,1,28.645601,77.297082,7,3
-PvtBhagwan Mahavir Hospital,0,1,28.688052,77.12372,9,1
-PvtArdent Ganpati,0,1,28.681969,77.030882,0,10
-"PvtPushpanjali Medical Centre, Pushpanjali Enclave, Vikas Marg Ext.",0,1,28.653971,77.309074,5,5
-"PvtMedeor, Qutub Institutional Area",0,2,28.537443,77.181019,8,0
-PvtTirath Ram Shah Ch. Hospital,0,0,28.670779,77.216289,30,10
-PvtSant Parmand Hospital,0,0,28.6777,77.224072,24,6
-PvtKukreja Hospital & Heart Centre,0,0,28.646753,77.117071,16,8
-PvtShri Ram Singh Hospital and Heart Institute,0,0,28.660574,77.287649,20,0
-PvtNKS Hospital,0,0,28.675248,77.190745,20,0
-PvtSehgal Neo,0,0,28.658047,77.091429,20,0
-PvtBhagat Chandra Hospital,0,0,28.593426,77.081261,17,0
-"PvtSamar Hospital, Dwarka",0,0,28.581999,77.01513,3,13
-PvtNational Heart Institute,0,0,28.557448,77.245678,15,0
-"PvtTarak Hospital, Uttam Nagar",0,0,28.619256,77.030003,4,11
-"PvtJeewan Mala Hospital, Rohtak Road",0,0,28.657938,77.194297,11,4
-PvtMGS Hospital,0,0,28.673701,77.13464,14,0
-"PvtMaharaja Agrasen Hospital, Dwarka",0,0,28.673941,77.134,8,6
-PvtCygnus Sonia,0,0,28.682524,77.052348,3,11
-PvtMalik Radix Hospital,0,0,28.635613,77.288023,13,1
-PvtSitaram Bhartia Institute,0,0,28.538917,77.184633,5,9
-"PvtSurya Hospital, Krishna Nagar",0,0,28.662955,77.285907,0,10
-"PvtGoyal Hospital, Paschim Vihar",0,0,28.661569,77.085319,0,10
-"PvtDharamvir Solanki Hospital, Rohini",0,0,28.714967,77.058039,0,10
-"PvtJeewan Moti Khera Hospital, Nangloi",0,0,28.680221,77.06682,0,10
-"PvtEast Delhi Medical Centre, Mansarovar Park",0,0,28.676131,77.296607,6,4
-"PvtApex City Hospital, West Vinod Nagar",0,0,28.626593,77.301999,10,0
-"PvtBhatia Global Hospital, Paschim Vihar",0,0,28.665493,77.082495,4,6
-PvtSanjeevan Hospital,0,0,28.641233,77.242953,10,0
-"PvtKapil Multispecialty Hospital, Nathupura",0,0,28.767606,77.181702,6,4
-"PvtPGH Hospital, Vikas Nagar",0,0,28.636134,77.048999,1,9
-PvtUniversal Centre of Health services,0,0,28.488134,77.308562,10,0
-"PvtCD Global Hospital, Najafgarh Road",0,0,28.682516,77.039258,1,9
-"PvtGupta Multispecialty Hospital, Vivek Vihar",0,0,28.668162,77.320441,0,10
-"PvtJain Hospital, Vikas Marg Extn.",0,0,28.653293,77.308741,1,9
-"PvtPanchsheel Hospital, Yamuna Vihar",0,0,28.701699,77.279654,3,7
-PvtKhandelwal,0,0,28.660384,77.287815,2,8
-PvtVikas Hospital,0,0,28.610737,76.980944,0,10
-"PvtKosmos Super Specialty Hospital, Vikas Marg Extn.",0,0,28.654902,77.310574,7,3
-"PvtDr. Chaudhary Moral Hospital, Yamuna Vihar",0,0,28.702338,77.272518,0,10
-"PvtAnsari Hospital, Sagarpur",0,0,28.60275,77.104526,6,4
-"PvtGarg Hospital, Karkardooma",0,0,28.653139,77.294949,7,3
-"PvtIshan Hospital, Rohini",0,0,28.733511,77.139681,4,0
+Govt Rajiv Gandhi Super Speciality (RGSS),1,33,28.689224,77.31649,199,301
+Govt Safdarjung (SJH),54,0,28.568031,77.205826,277,6
+Govt AIIMS (Delhi),47,3,28.567094,77.210639,218,47
+Govt Satyawadi Raja Harish Chandra,0,0,28.841098,77.102693,27,157
+Govt Deep Chand Bandhu Hospital,4,3,28.681946,77.178183,116,24
+Govt Ram Manohar Lohia (RML),4,10,28.625723,77.202721,132,5
+Govt Lady Hardinge Medical College (LHMC),3,10,28.635493,77.214175,60,0
+Pvt  Maharaja Agrasen Punjabi Bagh,13,0,28.673941,77.134,151,49
+Pvt  Max Saket,32,0,28.527061,77.210624,200,0
+Pvt  Saroj Super Speciality Hospital,0,10,28.70613,77.129093,58,117
+Pvt  Holy Family Hospital,11,4,28.561807,77.275111,110,65
+Pvt  Indraprastha Apollo,6,2,28.542578,77.283966,142,28
+Pvt  Hakeem Abdul Hameed Centenary Hospital (HAHC),0,2,28.514851,77.252114,23,127
+Pvt  BL Kapoor,7,0,28.643294,77.179716,126,24
+Pvt  Sir Gangaram Hospital,35,6,28.638515,77.189754,130,12
+Pvt  Max Patparganj,10,0,28.632918,77.309007,105,28
+Pvt  Sir Ganga Ram City (SGR City),16,0,28.638534,77.189743,117,8
+Pvt  St Stephen's,4,0,28.66682,77.214614,67,53
+Pvt  Batra,2,3,28.513003,77.24579,110,0
+Pvt  Maha Durga Charitable Trust (MDCT),4,4,28.714231,77.186591,85,15
+Pvt  Venkateshwar,2,2,28.588882,77.037531,83,17
+Pvt  Park Hospital,1,1,28.651637,77.093169,31,69
+Pvt  Fortis Escorts Heart Institute,4,0,28.560649,77.273914,86,14
+Pvt  Aakash Healthcare,2,0,28.605257,77.053385,100,0
+Pvt  Max Shalimar Bagh,10,0,28.727685,77.152588,90,0
+Pvt  Rajiv Gandhi Cancer Institute and Research Centre (RGCIRC),1,0,28.716672,77.111396,39,33
+Pvt  Human Care Medical Charitable Trust (HCMCT) Hospital,6,0,28.594527,77.070425,41,23
+Pvt  Sri Balaji Action,3,0,28.673784,77.110267,59,5
+Pvt  Mool Chand Khairati Ram Hospital,2,0,28.566415,77.235143,42,18
+Pvt  Fortis Shalimar Bagh,3,0,28.709538,77.169913,60,0
+Pvt  Mata Chanan Devi Hospital,5,2,28.618731,77.078303,44,12
+"Pvt  Bansal Global Hospital, Jahangirpuri",0,2,28.727303,77.162415,20,30
+Pvt  Jaipur Golden,6,0,28.697633,77.109563,48,0
+Pvt  Cygnus Orthocare,0,2,28.546175,77.19723,9,31
+Pvt  Santom,4,0,28.713978,77.138414,27,13
+Pvt  PSRI,8,0,28.533124,77.225489,40,0
+Pvt  Dharamshila Narayana Hospital,3,0,28.602503,77.314139,32,8
+Pvt  Ayushman Hospital,0,2,28.588159,77.05953,22,16
+Pvt  Indian Spinal Injuries Centre,4,0,28.533093,77.142206,19,18
+Pvt  Cygnus MLS,4,0,28.726634,77.051652,27,8
+Pvt  Sir Ganga Ram Kolmet (SGR Kolmet),5,1,28.643487,77.187293,32,2
+Pvt  Shree Aggarasain International Hospital,4,0,28.71851,77.064982,34,0
+Pvt  VIMHANS,1,8,28.569255,77.251076,6,26
+Pvt  Fortis Vasant Kunj,2,0,28.519201,77.160268,24,8
+Pvt  Madhukar Rainbow Children Hospital,0,2,28.529279,77.20464,1,25
+"Pvt  IBS Hospital, Lajpat Nagar",1,5,28.565215,77.244123,18,7
+"Pvt  Chayan Hospital, Najafgarh",0,1,28.594709,76.99146,1,24
+Pvt  Primus Super Specialty Hospital,2,0,28.592883,77.181263,24,0
+"Pvt  Kalra Hospital, Kirti Nagar",1,0,28.655192,77.138572,23,0
+"Pvt  Goyal Hospital and Urology Centre",2,0,28.661162,77.282445,21,0
+"Pvt  Action Cancer",1,1,28.673131,77.11319,3,17
+"Pvt  B.M. Gupta Hospital, Uttam Nagar",0,1,28.619539,77.061369,9,11
+"Pvt Jeevan Anmol Hospital, Mayur Vihar Phase-I",0,1,28.60608,77.295449,11,9
+"Pvt  RLKC Metro",0,1,28.651165,77.154765,20,0
+"Pvt  Rathi Hospital Nangloi",1,0,28.686582,77.070524,4,16
+"Pvt  Bhagwati Hospital",0,2,28.719112,77.129593,20,0
+"Pvt  Brahm Shakti Hospital",0,1,28.712276,77.08129,5,15
+"Pvt  Delhi Heart and Lung Institute",1,1,28.64162,77.205232,20,0
+"Pvt  Navjeevan Hospital",1,0,28.694848,77.108802,13,7
+"Pvt  Mata Roop Rani Maggo Hospital, Uttam Nagar",1,0,28.621075,77.050272,18,0
+"Pvt  Gandhi Nursing Home, Uttam Nagar",1,0,28.619938,77.053587,16,0
+"Pvt  Bensups Hospital, Dwarka",0,1,28.592878,77.04444,5,5
+"Pvt  Lalita Hospital, Begumpur",0,1,28.730656,77.06351,0,10
+"Pvt  SMS Hospital, Gagan Vihar",0,1,28.645601,77.297082,7,3
+Pvt  Bhagwan Mahavir Hospital,0,1,28.688052,77.12372,9,1
+Pvt  Ardent Ganpati,0,1,28.681969,77.030882,0,10
+"Pvt  Pushpanjali Medical Centre, Pushpanjali Enclave, Vikas Marg Ext.",0,1,28.653971,77.309074,5,5
+"Pvt  Medeor, Qutub Institutional Area",0,2,28.537443,77.181019,8,0
+Pvt  Tirath Ram Shah Ch. Hospital,0,0,28.670779,77.216289,30,10
+Pvt  Sant Parmand Hospital,0,0,28.6777,77.224072,24,6
+Pvt  Kukreja Hospital & Heart Centre,0,0,28.646753,77.117071,16,8
+Pvt  Shri Ram Singh Hospital and Heart Institute,0,0,28.660574,77.287649,20,0
+Pvt  NKS Hospital,0,0,28.675248,77.190745,20,0
+Pvt  Sehgal Neo,0,0,28.658047,77.091429,20,0
+Pvt  Bhagat Chandra Hospital,0,0,28.593426,77.081261,17,0
+"Pvt  Samar Hospital, Dwarka",0,0,28.581999,77.01513,3,13
+Pvt  National Heart Institute,0,0,28.557448,77.245678,15,0
+"Pvt  Tarak Hospital, Uttam Nagar",0,0,28.619256,77.030003,4,11
+"Pvt  Jeewan Mala Hospital, Rohtak Road",0,0,28.657938,77.194297,11,4
+Pvt  MGS Hospital,0,0,28.673701,77.13464,14,0
+"Pvt  Maharaja Agrasen Hospital, Dwarka",0,0,28.673941,77.134,8,6
+Pvt  Cygnus Sonia,0,0,28.682524,77.052348,3,11
+Pvt  Malik Radix Hospital,0,0,28.635613,77.288023,13,1
+Pvt  Sitaram Bhartia Institute,0,0,28.538917,77.184633,5,9
+"Pvt  Surya Hospital, Krishna Nagar",0,0,28.662955,77.285907,0,10
+"Pvt  Goyal Hospital, Paschim Vihar",0,0,28.661569,77.085319,0,10
+"Pvt  Dharamvir Solanki Hospital, Rohini",0,0,28.714967,77.058039,0,10
+"Pvt  Jeewan Moti Khera Hospital, Nangloi",0,0,28.680221,77.06682,0,10
+"Pvt  East Delhi Medical Centre, Mansarovar Park",0,0,28.676131,77.296607,6,4
+"Pvt  Apex City Hospital, West Vinod Nagar",0,0,28.626593,77.301999,10,0
+"Pvt Bhatia Global Hospital, Paschim Vihar",0,0,28.665493,77.082495,4,6
+Pvt Sanjeevan Hospital,0,0,28.641233,77.242953,10,0
+"Pvt Kapil Multispecialty Hospital, Nathupura",0,0,28.767606,77.181702,6,4
+"Pvt PGH Hospital, Vikas Nagar",0,0,28.636134,77.048999,1,9
+Pvt Universal Centre of Health services,0,0,28.488134,77.308562,10,0
+"Pvt CD Global Hospital, Najafgarh Road",0,0,28.682516,77.039258,1,9
+"Pvt Gupta Multispecialty Hospital, Vivek Vihar",0,0,28.668162,77.320441,0,10
+"Pvt Jain Hospital, Vikas Marg Extn.",0,0,28.653293,77.308741,1,9
+"Pvt Panchsheel Hospital, Yamuna Vihar",0,0,28.701699,77.279654,3,7
+Pvt Khandelwal,0,0,28.660384,77.287815,2,8
+Pvt Vikas Hospital,0,0,28.610737,76.980944,0,10
+"Pvt Kosmos Super Specialty Hospital, Vikas Marg Extn.",0,0,28.654902,77.310574,7,3
+"Pvt Dr. Chaudhary Moral Hospital, Yamuna Vihar",0,0,28.702338,77.272518,0,10
+"Pvt Ansari Hospital, Sagarpur",0,0,28.60275,77.104526,6,4
+"Pvt Garg Hospital, Karkardooma",0,0,28.653139,77.294949,7,3
+"Pvt Ishan Hospital, Rohini",0,0,28.733511,77.139681,4,0
