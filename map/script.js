@@ -42,9 +42,9 @@ const addPins = function(map,hospid,hospname,vacant,occupied,longi,lati,vbed,obe
             <tr><td>' +vacant.toString()+'</td><td>'+occupied.toString()+'</td>\
             <tr><td>Hospital Beds</td>\
             <tr><td>' +vbed.toString()+'</td><td>'+obed.toString() +'</td></tr>\
-            </table><a href="https://www.google.co.in/maps/place/'+hospname+'/@28.4799418,77.2824343,12.63z/data=!4m8!1m2!2m1!1s'+hospname+'">Get directions.'
+            </table><a href="https://www.google.com/maps/search/?api=1&query='+hospname+'">Get directions.'
         };
-        Microsoft.Maps.Events.addHandler(pin, 'mouseover', pushpinClicked);
+        Microsoft.Maps.Events.addHandler(pin, 'click', pushpinClicked);
         map.entities.push(pin);
     }
 }
