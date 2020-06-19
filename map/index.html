@@ -16,9 +16,21 @@
             <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&branch=experimental&key=Av4EXrI3jTDkujMDtUrjtMrGUwuCSE52KLBcxvxbI78c3hA32ayoocYbl8MwQ5zv' async></script>
             <div class="myMap" id="myMap">
             </div>
+            <div id="pseudo"></div>
         </div>
     </section>
     <aside>
+            <button id="search"onclick="showson()">Search a Hospital</button>
+            <div class="cvr" onclick="cls()"></div>
+            <div id="hdd" class="hdd">
+            <small onclick="cls()">&times; Cancel</small>
+            <h4>Search a hospital</h4><small>*showing hospitals from adjacent map only</small><br>
+            <input type='text' id="searchname" placeholder='Enter Name' onkeypress="dynamicsearch()">
+            <ul id="dynamics">
+            </ul>
+            <div class="searchres">
+            </div>
+            </div>
             <input onclick="validtest()" type="button" class="btn-validity" id="btn-validity" value='Check Validity'>
             <script>
                 const validtest = function(){

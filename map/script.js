@@ -88,3 +88,51 @@ const pushAllPins = function(map){
             });
         }
     }
+var ul = document.getElementById('dynamics');
+function dynamicsearch(){
+    var lo = document.getElementById('searchname').value;    
+    ul.innerHTML=''
+    for(var i in d) {
+    if (d[i][0].search(lo)!=-1){
+        ul.style.height='80px';
+        let li = document.createElement('li');
+        li.textContent=d[i][0]
+        li.setAttribute('se-long',d[i][3])
+        li.setAttribute('se-lat',d[i][4])
+        li.setAttribute('se_id',i)
+        ul.appendChild(li)
+    }
+    }
+    document.querySelectorAll('li').forEach(function(elem) {
+        elem.addEventListener('click',(e)=>{
+        dynclick(e)
+    })
+})
+}
+
+function dynclick(e){
+    ul.innerHTML=''
+    ul.style.height='0px';
+    var mnh = e.target.attributes[2].nodeValue
+    document.querySelector('.searchres').innerHTML=e.target.textContent+"<br>\
+    "+'<table border="0px">\
+            <tr> <th>Vacant</th> <th> Occupied</th></tr>\
+            <tr><td>Ventilators</td></tr>\
+            <tr><td>' +d[mnh][2].toString()+'</td><td>'+d[mnh][1].toString()+'</td>\
+            <tr><td>Hospital Beds</td>\
+            <tr><td>' +d[mnh][6].toString()+'</td><td>'+d[mnh][5].toString() +'</td></tr>\
+            </table><a href="https://www.google.com/maps/search/?api=1&query='+e.target.textContent+'">Get directions.'
+            console.log(e)
+}
+function showson(){
+    document.querySelector('.cvr').style.display='block';
+    document.querySelector('.hdd').style.display='block';
+    document.querySelector('#myMap').style.display='none';
+    document.querySelector('#pseudo').style.display='block'; 
+}
+function cls(){
+    document.querySelector('.cvr').style.display='none';
+    document.querySelector('.hdd').style.display='none';
+    document.querySelector('#myMap').style.display='block';
+    document.querySelector('#pseudo').style.display='none'; 
+}
