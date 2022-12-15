@@ -27,7 +27,7 @@ Tehnology is probably the greatest enabler. It is not only the fastest medium to
 It's apparent that these deaths could have been avoided if the patient had gone to the right hospital at the right time. RespirCov aims to address this issue. It lays out a map on the user’s device where anybody can get location-wise latest data of the nearest hospital to their current location.
 
 ## Demo video
-[![Watch the video](video.png)](https://youtu.be/JA5Gdi9ZCUw)
+[![Watch the video](./assets/video.png)](https://youtu.be/JA5Gdi9ZCUw)
 
 ## The architecture
 1. Hospitals register/login to the platform and update their numbers in realt time.
@@ -48,7 +48,7 @@ We plan to team up with more hospitals to expand the coverage and provide figure
 
 
 ## Project roadmap
-![Roadmap](roadmap.png)
+![Roadmap](./assets/roadmap.png)
 
 ## Getting started and Testing
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -61,13 +61,15 @@ These instructions will get you a copy of the project up and running on your loc
 1. cd into this project's root directory
 1. Run `npm install` to install this app's dependencies
 1. Run `npm start` to start the app
-1. Access the running app in a browser at <http://localhost:6001>A step by step series of examples that tell you how to get a development env running
+1. Access the running app in a browser at <http://localhost:6001>
 
 ```When you are done```
 1. Run `npm stop` to stop the app
 
 ## Live demo
-Find the endpoint here: [https://covid-19.eu-gb.cf.appdomain.cloud/](https://covid-19.eu-gb.cf.appdomain.cloud/app)
+![demo](./assets/demo.png)
+
+Find the endpoint here: [https://covid-19.eu-gb.cf.appdomain.cloud/](https://covid-19.eu-gb.cf.appdomain.cloud/app) (Now undeployed.)
 
 ## Built with
 
