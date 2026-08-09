@@ -6,7 +6,7 @@
 		"start": "node app.js"
 	},
 	"dependencies": {
-		"cfenv": "^1.2.6",
+		"cfenv": "^1.2.7",
 		"cookie-parser": "^1.4.7",
 		"csvtojson": "^2.0.13",
 		"express": "^4.22.1",
