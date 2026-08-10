@@ -9,7 +9,7 @@
 		"cfenv": "^1.2.6",
 		"cookie-parser": "^1.4.7",
 		"csvtojson": "^2.0.13",
-		"express": "^4.22.1",
+		"express": "^4.22.2",
 		"path": "*",
 		"sha256": "*"
 	},
